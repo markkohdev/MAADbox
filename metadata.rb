@@ -1,0 +1,7 @@
+name             'maadbox'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures maadbox'
+long_description 'Installs/Configures maadbox'
+version          '0.1.0'
