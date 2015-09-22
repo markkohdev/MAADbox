@@ -25,14 +25,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   # If this value is a shorthand to a box in Vagrant Cloud then
   # config.vm.box_url doesn't need to be specified.
-  config.vm.box = 'bento/ubuntu-14.04'
+  config.vm.box = 'ubuntu/trusty64'
 
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
   # network interface) by any external networks.
-  config.vm.network :private_network, type: 'dhcp'
+  # config.vm.network :private_network, type: 'dhcp'
+  config.vm.network :public_network
+  config.vm.network :private_network, ip: "10.10.10.5"
 
   # Allow ssh agent forwarding (so we can use github)
   # config.ssh.private_key_path = '~/.ssh/id_rsa'
