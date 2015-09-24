@@ -26,13 +26,13 @@ echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /home/vagrant/.ssh/co
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 # Clone repos
-if [ ! -d "$WEBSERVER_ROOT" ]; then
-	# git clone git@github.com:Booksmart/django-api-seed.git $WEBSERVER_ROOT
-fi
+# if [ ! -d "$WEBSERVER_ROOT" ]; then
+# 	git clone git@github.com:Booksmart/django-api-seed.git $WEBSERVER_ROOT
+# fi
 
-if [ ! -d "$NGAPP_ROOT" ]; then
-  #	git clone git@github.com:markohdev/angular-seed.git $NGAPP_ROOT
-fi
+# if [ ! -d "$NGAPP_ROOT" ]; then
+#   git clone git@github.com:markohdev/angular-seed.git $NGAPP_ROOT
+# fi
 
 # Install bash conveniences
 if [ ! -f /home/vagrant/.bash_additions ]; then
