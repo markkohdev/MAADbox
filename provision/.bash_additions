@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export WEBSERVER_ROOT=/opt/code/django/
+export NGAPP_ROOT=/opt/code/angular/
+
+alias webserver='cd /opt/code/django/'
+alias ngapp='cd /opt/code/angular/'

@@ -40,7 +40,7 @@ def provision(config)
 
   # Copy necessary files to box
   config.vm.provision :file, source: 'provision', destination: "/tmp/provision"
-  config.vm.provision :file, source: 'bin', destination: "/tmp/bin"
+  config.vm.provision :file, source: 'bin_files', destination: "/tmp/bin"
 
   # Call our provisioner shell script
   config.vm.provision "shell", path: "provision/setup.sh", keep_color: true
