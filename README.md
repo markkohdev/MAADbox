@@ -14,6 +14,7 @@ The goals of creating this box are:
 Before running the setup instructions, please satisfy the following dependencies on your machine:
 - [vagrant](http://www.vagrantup.com/) - download and install from website ( > 1.7)
 - [virtual box](https://www.virtualbox.org/wiki/Downloads) - download and install from website. **IMPORTANT: Make sure to download the website version.  The apt-get version will not work!**
+- [chef-dk](https://downloads.chef.io/chef-dk/) - download and install from website
 - [sshfs](http://fuse.sourceforge.net/sshfs.html) - This should also be available via `apt-get` if you're on Linux
 - [git](https://www.github.com) (Be use to add the SSH key from your new computer to your [GitHub account](https://github.com/settings/ssh).)
 - More than 4GB of RAM on your workstation. If you have a less than 4GB of RAM on your laptop, you'll need to manually modify the config.vm.memory value in the Vagrantfile to account for this
@@ -39,12 +40,20 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
 
+#### Install vagrant dependencies
+You first need to install chef and berkshelf for vagrant.  We've made this easy to do.  Simply run
+```
+$ . install.sh
+```
+- If vagrant dependencies change you'll simply need to run this again
+
 #### Building the MAADbox
 ##### Some things to note first:
 - The first time your VM builds, it will take ~10-20 minutes, patience is a virtue.
 - During provisioning, the terminal text will probably spit out red text.  This is an issue with the tty color not changing back, and at the moment we don't know the fix for it.  Don't worry about this, chances are things are still installing correctly.
 - Don't build one VM while running another. It will crash your workstation.
 - Even if you ran ssh-add in the past in a different shell from one you may using now, you may still have to enable ssh-agent, especially if you are logging in remotely. ssh-agent $SHELL; ssh-add should take care of this.
+
 
 ##### Building/running the VM
 To actually build the VM, navigate to the top of this repo directory (where the Vagrantfile is) and run
