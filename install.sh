@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+. set_path.sh
+
 sudo apt-get install bundler
 
 vagrant plugin install vagrant-berkshelf
