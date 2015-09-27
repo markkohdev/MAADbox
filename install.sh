@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-. set_path.sh
+cat set_path.sh >> ~/.bashrc
+source ~/.bashrc 
 
 sudo apt-get install -y bundler
 
