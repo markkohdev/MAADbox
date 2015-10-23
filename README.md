@@ -33,7 +33,6 @@ Before running the setup instructions, please satisfy the following dependencies
 ```
 $ sudo sh -c "cat .hostaliases >> /etc/hosts"
 ```
-- For Windows users, from the MAADbox directory `cp /etc/hosts .; mv hosts .hostaliases`
 - Be sure to set `user.email` and `user.name` in your `git config --global`. This project depends on them being properly set.
 ```
 $ git config --global user.name "John Doe"
@@ -46,6 +45,13 @@ You first need to install chef and berkshelf for vagrant.  We've made this easy 
 $ . install.sh
 ```
 - If vagrant dependencies change you'll simply need to run this again
+
+**For Windows users**, instead of the above, in powershell navigate to the MAADbox directory and run:
+```
+> & .\install.ps1
+```
+- NOTE: If you get an error about scripts being disabled, reopen powershell as an
+administrator and run `Set-ExecutionPolicy Unrestricted`, then try again 
 
 #### Building the MAADbox
 ##### Some things to note first:
