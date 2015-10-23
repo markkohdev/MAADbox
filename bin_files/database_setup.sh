@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Q1="CREATE DATABASE IF NOT EXISTS booksmart;"
+Q1="CREATE DATABASE IF NOT EXISTS maadbox;"
 mysql -uroot -proot -e "$Q1"
 echo "Database maadbox created"
 
