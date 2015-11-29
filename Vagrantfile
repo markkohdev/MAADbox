@@ -17,6 +17,7 @@ def configure_network_ports(config)
     config.vm.network "forwarded_port", guest: 3306, host: 5005 # MySQL port
     config.vm.network "forwarded_port", guest: 5000, host: 5000 # Our angular app
     config.vm.network "forwarded_port", guest: 5001, host: 5001 # Our django API
+    config.vm.network "forwarded_port", guest: 80, host: 5002 # Our django API
     config.vm.network "forwarded_port", guest: 35729, host: 35729 # Browsersync
   end
 end
