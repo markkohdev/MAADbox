@@ -27,8 +27,8 @@ def provision(config)
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
+        server_root_password: 'root',
+        server_debian_password: 'root',
         server_repl_password: 'replpass'
       }
     }
